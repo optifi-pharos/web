@@ -9,8 +9,8 @@ import { useEffect, useState } from "react"
 import { Input } from "@heroui/input"
 import { Button } from "@heroui/button"
 import ModalTransactionCustom from "@/components/modal/modal-transaction-custom"
-import { useEduBalance } from "@/hooks/query/useEduBalance"
-import { useEduBalanceAI } from "@/hooks/query/useEduBalanceAI"
+import { usePTTBalance } from "@/hooks/query/usePTTBalance"
+import { usePTTBalanceAI } from "@/hooks/query/usePTTBalanceAI"
 import { useAddressAI } from "@/hooks/query/useAddressAI"
 import { Loader } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -24,9 +24,9 @@ export default function SendPTT({ toAddress }: { toAddress: `0x${string}` }) {
   const [gasLimit, setGasLimit] = useState("6885602")
   const [totalGasFee, setTotalGasFee] = useState<string | null>(null)
 
-  const { formatted, symbol } = useEduBalance()
+  const { formatted, symbol } = usePTTBalance()
   const { addressAI } = useAddressAI()
-  const { formatted: aiFormatted } = useEduBalanceAI({ address: addressAI })
+  const { formatted: aiFormatted } = usePTTBalanceAI({ address: addressAI })
 
   const {
     data: txHash,

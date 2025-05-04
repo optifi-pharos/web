@@ -48,7 +48,7 @@ export default function ModalTransactionCustom({
                 rel='noopener noreferrer'
                 className='underline underline-offset-1 cursor-pointer text-sm text-center'
               >
-                view on educhain explorer
+                view on pharos explorer
               </Link>
             </>
           )}

@@ -1,25 +1,21 @@
 import { pharos } from '@/lib/wagmi'
-import { useBalance, useAccount } from 'wagmi'
+import { useBalance } from 'wagmi'
 
-export function useEduBalance({
+export function usePTTBalanceAI({
   address = undefined
 }: {
   address?: HexAddress
-} = {}) { 
-  const { address: userAddress } = useAccount()
-
-  const usedAddress = address || userAddress
-
+} = {}) {
   const {
     data: balance,
     isLoading,
     isError,
     refetch,
   } = useBalance({
-    address: usedAddress,
+    address,
     chainId: pharos.id,
     query: {
-      enabled: !!usedAddress,
+      enabled: !!address,
     }
   })
 

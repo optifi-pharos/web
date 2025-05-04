@@ -41,11 +41,8 @@ const SwapCard: React.FC = () => {
 
   useEffect(() => {
     if (sData && sData.length >= 2) {
-      const eduToken = sData && sData.find(token => token.nameToken === 'EDU');
-      const weduToken = sData && sData.find(token => token.nameToken === 'WEDU');
-    
-      setFromToken(eduToken || null);
-      setToToken(weduToken || null);
+      setFromToken(sData[0]);
+      setToToken(sData[1]);
     }
   }, [sData]);
 

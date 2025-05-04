@@ -10,13 +10,13 @@ import { useAddressAI } from "@/hooks/query/useAddressAI";
 import Loading from "@/components/loader/loading";
 import useGenerateContent from "@/hooks/query/api/useGeneratedContent";
 import TransferContent from "./TransferContent";
-import { useEduBalanceAI } from "@/hooks/query/useEduBalanceAI";
+import { usePTTBalanceAI } from "@/hooks/query/usePTTBalanceAI";
 
 const GenerateComponent: React.FC = () => {
   const { riskSaved: risk, idProtocolSaved: protocolId } = useGenerateContent();
   const { isConnected } = useAccount();
   const { addressAI, laAI } = useAddressAI();
-  const { formatted } = useEduBalanceAI({ address: addressAI });
+  const { formatted } = usePTTBalanceAI({ address: addressAI });
 
   const hasBalance = formatted !== undefined && Number(formatted) >= 0.01;
   const noBalance = formatted !== undefined && Number(formatted) < 0.01;

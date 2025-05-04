@@ -29,8 +29,8 @@ export default function DefaultLayout({
               <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
-                href="https://educhain.xyz/"
-                title="educahin"
+                href="https://pharosnetwork.xyz/"
+                title="pharos"
               >
                 <span className="text-default-600">Built in</span>
                 <p className="text-warning">Pharos Network</p>
