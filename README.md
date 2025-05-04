@@ -63,7 +63,7 @@ This project is licensed under the MIT License.
 ---
 
 ## ✅ Website URL
-🌐 Website: [https://optiFi.vercel.app/](https://optiFi.vercel.app/)  
+🌐 Website: [https://opti-fi.vercel.app/](https://opti-fi.vercel.app/)  
 
 ---
 
