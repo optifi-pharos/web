@@ -1,5 +1,5 @@
 import React from 'react'
-import SendEDU from './SendEDU'
+import SendPTT from './SendPTT'
 
 export default function TransferContent({
   addressAI
@@ -11,7 +11,7 @@ export default function TransferContent({
       <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal">
         You need to transfer native EDU Testnet tokens to your AI wallet to cover gas fees for transactions.
       </p>
-      <SendEDU toAddress={addressAI}/>
+      <SendPTT toAddress={addressAI}/>
     </div>
   )
 }

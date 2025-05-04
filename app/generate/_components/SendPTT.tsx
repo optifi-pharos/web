@@ -15,7 +15,7 @@ import { useAddressAI } from "@/hooks/query/useAddressAI"
 import { Loader } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-export default function SendEDU({ toAddress }: { toAddress: `0x${string}` }) {
+export default function SendPTT({ toAddress }: { toAddress: `0x${string}` }) {
   const [amount, setAmount] = useState("0.05")
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -118,7 +118,7 @@ export default function SendEDU({ toAddress }: { toAddress: `0x${string}` }) {
           className="w-full"
         />
         <p className="text-xs text-neutral-500">
-          Minimum: 0.05 Pharos. Recommended: 0.1 Pharos.
+          Minimum: 0.05 PTT. Recommended: 0.1 PTT.
         </p>
       </div>
 
@@ -130,7 +130,7 @@ export default function SendEDU({ toAddress }: { toAddress: `0x${string}` }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-1 block">
-              Max Base Fee (Pharos)
+              Max Base Fee (PTT)
             </label>
             <Input
               type="number"
@@ -144,7 +144,7 @@ export default function SendEDU({ toAddress }: { toAddress: `0x${string}` }) {
 
           <div>
             <label className="text-sm text-neutral-700 dark:text-neutral-300 mb-1 block">
-              Priority Fee (Pharos)
+              Priority Fee (PTT)
             </label>
             <Input
               type="number"
@@ -174,7 +174,7 @@ export default function SendEDU({ toAddress }: { toAddress: `0x${string}` }) {
         <div className="text-sm text-neutral-600 dark:text-neutral-300">
           Estimated gas fee:{" "}
           <span className="font-semibold text-orange-500 dark:text-orange-400">
-            {parseFloat(totalGasFee || "0.00").toFixed(4) || "0.000000"} Pharos
+            {parseFloat(totalGasFee || "0.00").toFixed(4) || "0.000000"} PTT
           </span>{" "}
           <span className="text-neutral-400">(≈ $0.00)</span>
         </div>
@@ -199,12 +199,12 @@ export default function SendEDU({ toAddress }: { toAddress: `0x${string}` }) {
             Sending...
           </div>
         ) : (
-          "Send Pharos"
+          "Send PTT"
         )}
       </Button>
 
       <p className="text-sm text-neutral-300">
-        Note: If you don&apos;t have any Pharos tokens, you can claim them from faucet{" "}
+        Note: If you don&apos;t have any PTT tokens, you can claim them from faucet{" "}
         <a
           href="https://hackquest.io.com/"
           target="_blank"
